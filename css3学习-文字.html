@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>css3学习-文字换行及字体</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="">
+    <style type="text/css">
+        /*        word-warp:换行，可以防止文字溢出*/
+        
+        div {
+            width: 100px;
+            border: 1px solid #555;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+        /*        font-face可以实现从服务端下载字体，这样页面就可以显示你想要的样式，而不用再担心客户端没有对应字体*/
+        
+        @font-face {
+            /*            定义字体名称及服务器路径*/
+            font-family: mywebfont;
+            src: url('./font/minster1.ttf');
+        }
+        
+        .wenfont {
+            /*            使用自定义字体*/
+            font-family: mywebfont;
+            font-size: 24px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--   强制英文换行，防止文字溢出-->
+    <div>
+        zhuanye shiyu zhuanzhu,zuoshi yuanyu yuanjian; 华清远见的官方地址是:http://www.hqyj.com/
+
+    </div>
+
+
+
+    <!--加载服务器端字体-->
+    <div class="wenfont">
+
+        数字更能体现字体：123456,my web is good
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS3-属性选择器</title>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <style type="text/css">
+        /*        属性选择器根据属性进行定位 */
+        /*        属性值等于设定的值直接用= */
+        
+        ul li[title="logo"] {
+            width: 280px;
+            height: 50px;
+            background-image: url(image/img1.jpg);
+        }
+        /*        匹配开始字符串为设置的value用^  */
+        /*        匹配结束字符串为设置的value用$  */
+        /*        匹配包含字符串为设置的value用*   */
+        
+        ul li[title^="menu"] {
+            width: 120px;
+            height: 30px;
+            color: darkred;
+        }
+        
+        ul li[title$="mey"] {
+            text-decoration: underline;
+        }
+        
+        ul li[title*="_"] {
+            font-weight: bolder;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <ul>
+        <li title="logo">LOGO</li>
+        <li title="menu_1_mey">衬衣</li>
+        <li title="menu_2_mey">羽绒服</li>
+        <li title="menu_3_mey">棉衣</li>
+        <li title="menu_4_mey">男裤</li>
+    </ul>
+
+
+
+</body>
+
+</html>
