@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <meta charset="utf-8">
+    </title>
+    <script type="text/javascript" src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="http://cdn.hcharts.cn/highstock/highstock.js"></script>
+    <script type="text/javascript" src="http://cdn.hcharts.cn/highmaps/highmaps.js"></script>
+    <script type="text/javascript">
+    </script>
+    <style type="text/css">
+    .bdcdy_list .hover {
+        /*background-color:#5494c6;*/
+        background-color: #dde9f5;
+        color: #535b66;
+    }
+    </style>
+</head>
+
+<body>
+    <h2>List</h2>
+    <dl id="bdcdy_list" class="bdcdy_list">
+        <dt>CarsList</dt>
+        <dd value='swww' id='Saab'>Saab ... ...</dd>
+        <dd id="BMW">BMW ... ...</dd>
+        <dd id="Volvo"> VOLVO</dd>
+    </dl>
+    <script type="text/javascript">
+    $("#bdcdy_list dd").click(function(e) {
+
+        var mycars = new Array();
+        mycars[0] = "Saab";
+        mycars[1] = "Volvo";
+        mycars[2] = "BMW";
+        for (var i = 0; i < mycars.length; i++) {
+            var a = mycars[i]
+
+            $("#" + a + "").removeAttr("class");
+          
+        }
+
+        e.target.className = "hover";
+
+    })
+    </script>
+</body>
+
+</html>
