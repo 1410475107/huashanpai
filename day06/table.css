@@ -1,0 +1,41 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	width: 100%;
+	min-width: 900px;
+	cursor: pointer;
+}
+
+table, th, td {
+	border: 1px solid #E1E1E1;
+	border-collapse: collapse;
+}
+
+table tr {
+	height: 40px;
+	/*line-height: 40px;*/
+}
+
+table tr td {
+	padding-left: 10px;
+}
+
+table tr:nth-child(2n) {
+	background-color: #EEEEEE;
+}
+
+table tr:nth-child(2n+1) {
+	background-color: #DDDDDD;
+}
+
+table tr:first-child {
+	background-color: #11CCDD;
+	color: #fff;
+}
+
+table tr:not(.tr1):hover {
+	background-color: #fff;
+}
